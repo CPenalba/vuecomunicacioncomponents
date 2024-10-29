@@ -1,16 +1,19 @@
 <template>
   <div>
-    <PadreDeportesVue />
+    <!-- <PadreDeportesVue /> -->
+    <PadreNumeros />
   </div>
 </template>
 
 <script>
-import PadreDeportesVue from "./components/PadreDeportes.vue";
+import PadreNumeros from "./components/PadreNumeros.vue";
+// import PadreDeportesVue from "./components/PadreDeportes.vue";
 
 export default {
   name: "App",
   components: {
-    PadreDeportesVue,
+    // PadreDeportesVue,
+    PadreNumeros,
   },
 };
 </script>
