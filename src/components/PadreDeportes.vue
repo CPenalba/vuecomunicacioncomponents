@@ -1,8 +1,14 @@
 <template>
   <div>
     <h1 style="color: blue">Padre Deportes</h1>
+    <h2 style="background-color: yellow" v-if="favorito">
+      Su deporte favorito es: {{ favorito }}
+    </h2>
     <ul v-for="sport in deportes" :key="sport">
-      <HijoDeporte :nombredeporte="sport" v-on="seleccionarFavoritoParent" />
+      <HijoDeporte
+        :nombredeporte="sport"
+        v-on:seleccionarFavoritoParent="seleccionarFavoritoParent"
+      />
     </ul>
   </div>
 </template>
@@ -14,8 +20,9 @@ export default {
   name: "PadreDeportes",
   methods: {
     //creamos un metood para que sea llamado desde el hijo
-    seleccionarFavoritoParent() {
+    seleccionarFavoritoParent(deporteFavorito) {
       console.log("Yo soy tu padre");
+      this.favorito = deporteFavorito;
     },
   },
   components: {
@@ -24,6 +31,7 @@ export default {
   data() {
     return {
       deportes: ["Surf", "Curling", "Bolos", "Cartas", "Petanca", "Peonza"],
+      favorito: null,
     };
   },
 };
