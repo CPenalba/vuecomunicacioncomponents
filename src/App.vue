@@ -2,12 +2,14 @@
   <div>
     <!-- <PadreDeportesVue /> -->
     <!-- <PadreNumeros /> -->
-    <ComicsComponent />
+    <!-- <ComicsComponent /> -->
+    <SeleccionMultiple />
   </div>
 </template>
 
 <script>
-import ComicsComponent from "./components/ComicsComponent.vue";
+import SeleccionMultiple from "./components/SeleccionMultiple.vue";
+// import ComicsComponent from "./components/ComicsComponent.vue";
 // import PadreNumeros from "./components/PadreNumeros.vue";
 // import PadreDeportesVue from "./components/PadreDeportes.vue";
 
@@ -16,7 +18,8 @@ export default {
   components: {
     // PadreDeportesVue,
     // PadreNumeros,
-    ComicsComponent,
+    // ComicsComponent,
+    SeleccionMultiple,
   },
 };
 </script>
