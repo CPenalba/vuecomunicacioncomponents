@@ -2,7 +2,7 @@
   <div>
     <h1 style="color: red">Padre Numeros</h1>
     <h2>La suma es {{ suma }}</h2>
-    <button @click="generarAleatorio()">Nuevo numero</button>
+    <button @click="generarAleatorio()" class="button">Nuevo numero</button>
     <h2 v-for="num in numeros" :key="num">
       <HijoNumero
         :numerosvarios="num"
@@ -38,4 +38,23 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.button {
+  cursor: pointer;
+  font-size: large;
+  font-family: inherit;
+  font-weight: bold;
+  color: #0011ff;
+  background-color: #f8f8fd;
+  padding: 0.8em 2.2em;
+  border-radius: 50em;
+  border: 6px solid #8b93f8;
+  box-shadow: 0px 8px #1f35ff;
+}
+.button:active {
+  position: relative;
+  top: 8px;
+  border: 6px solid #646fff;
+  box-shadow: 0px 0px;
+}
+</style>
