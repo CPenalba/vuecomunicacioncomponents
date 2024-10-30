@@ -6,6 +6,7 @@ import PadreNumeros from "./components/PadreNumeros.vue";
 import SeleccionMultiple from "./components/SeleccionMultiple.vue";
 import SeleccionMultipleNormal from "./components/SeleccionMultipleNormal.vue";
 import SumaCheckbox from "./components/SumaCheckbox.vue";
+import NumeroDoble from "./components/NumeroDoble.vue";
 
 const myRoutes = [
   { path: "/", component: ComicsComponet },
@@ -14,6 +15,7 @@ const myRoutes = [
   { path: "/selectmultiple", component: SeleccionMultiple },
   { path: "/selectmultiplenormal", component: SeleccionMultipleNormal },
   { path: "/sumachk", component: SumaCheckbox },
+  { path: "/numdoble/:numero?", component: NumeroDoble },
 ];
 
 const router = createRouter({

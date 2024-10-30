@@ -21,6 +21,12 @@
       <li>
         <router-link to="/sumachk">Suma checkbox</router-link>
       </li>
+      <li>
+        <router-link to="/numdoble">Numero doble SIN</router-link>
+      </li>
+      <li>
+        <router-link to="/numdoble/7">Numero doble CON</router-link>
+      </li>
     </ul>
   </div>
 </template>
@@ -38,9 +44,9 @@ ul#menu li {
 li {
   margin: 10px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 25px;
+  font-size: 20px;
 }
-li a{
+li a {
   color: white;
   text-decoration-style: wavy;
 }
