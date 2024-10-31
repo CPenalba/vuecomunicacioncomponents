@@ -1,12 +1,13 @@
 <template>
   <div>
-    <Menu />
+    <MenuTablaMultiplicarVue />
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-import Menu from "./components/Menu.vue";
+// import Menu from "./components/Menu.vue";
+import MenuTablaMultiplicarVue from "./components/MenuTablaMultiplicar.vue";
 
 export default {
   name: "App",
@@ -15,7 +16,8 @@ export default {
     // PadreNumeros,
     // ComicsComponent,
     // SeleccionMultiple,
-    Menu,
+    // Menu,
+    MenuTablaMultiplicarVue,
   },
 };
 </script>

@@ -1,31 +1,10 @@
 <template>
   <div class="container">
     <ul id="menu">
-      <li>
-        <router-link to="/"> Comics </router-link>
-      </li>
-      <li>
-        <router-link to="/padredepor">Padre deportes</router-link>
-      </li>
-      <li>
-        <router-link to="/padrenum">Padre numeros</router-link>
-      </li>
-      <li>
-        <router-link to="/selectmultiple">Select multiple</router-link>
-      </li>
-      <li>
-        <router-link to="/selectmultiplenormal"
-          >Select multiple normal</router-link
-        >
-      </li>
-      <li>
-        <router-link to="/sumachk">Suma checkbox</router-link>
-      </li>
-      <li>
-        <router-link to="/numdoble">Numero doble SIN</router-link>
-      </li>
       <li v-for="num in numeros" :key="num">
-        <router-link :to="'/numdoble/' + num">Doble: {{ num }}</router-link>
+        <router-link :to="'/tablamult/' + num"
+          >Tabla del: {{ num }}</router-link
+        >
       </li>
     </ul>
   </div>
@@ -33,11 +12,17 @@
 
 <script>
 export default {
-  name: "MenuComponent",
+  name: "MenuTablaMultiplicar",
   data() {
     return {
-      numeros: [2, 3],
+      numeros: [],
     };
+  },
+  mounted() {
+    for (var i = 1; i <= 5; i++) {
+      const aleatorio = Math.floor(Math.random() * 100) + 1;
+      this.numeros.push(aleatorio);
+    }
   },
 };
 </script>
@@ -53,7 +38,6 @@ li {
 }
 li a {
   color: white;
-  text-decoration-style: wavy;
 }
 .container {
   width: 100%;
